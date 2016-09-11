@@ -5,7 +5,7 @@ var eventSchema = new mongoose.Schema({
   data: {},
 })
 
-eventSchema.index({when:1});
+eventSchema.index({when: 1});
 
 function MongoQueue(options) {
 
@@ -13,7 +13,6 @@ function MongoQueue(options) {
   var modelName = options.modelName || 'LongtermEvent';
   var Event = connection.model('LongtermEvent', eventSchema, options.collection);
 
-  // MongoQueue doesn't use `this`, it just sets scoped variables instead.
   return {
     peek: function(callback) {
       Event.find().sort('when').limit(1).exec(callback);
