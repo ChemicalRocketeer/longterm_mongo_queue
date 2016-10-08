@@ -30,6 +30,7 @@
     "mongoose": "4.6.0"
   },
   "devDependencies": {
+    "codeclimate-test-reporter": "^0.4.0",
     "coveralls": "^2.11.14",
     "istanbul": "^0.4.5",
     "longterm-queue-test": "^1.1.0",
