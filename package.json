@@ -7,7 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "istanbul cover --report lcov _mocha"
+    "test": "set NODE_ENV=test && mocha --recursive",
+    "cover-test": "set NODE_ENV=test && istanbul cover --report lcov node_modules/mocha/bin/_mocha",
+    "coverage-cleanup": "rm -rf ./coverage"
   },
   "repository": {
     "type": "git",
