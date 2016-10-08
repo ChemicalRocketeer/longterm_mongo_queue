@@ -28,6 +28,8 @@
     "mongoose": "4.6.0"
   },
   "devDependencies": {
+    "coveralls": "^2.11.14",
+    "istanbul": "^0.4.5",
     "longterm-queue-test": "^1.1.0",
     "mocha": "3.0.2"
   }
