@@ -35,10 +35,7 @@ module.exports = function MongoQueue(options) {
 
     remove: function(id, callback) {
       if (!isValid(id)) return callback(null, 0);
-      Event.remove({_id: id}, function(err, data) {
-        var n = data && data.result && data.result.n ? data.result.n : 0;
-        callback(err, n);
-      });
+      remove({_id: id}, callback);
     },
 
     find: function(id, callback) {
@@ -51,11 +48,15 @@ module.exports = function MongoQueue(options) {
     },
 
     clear: function(callback) {
-      Event.remove({}, function(err, data) {
-        var n = data && data.result && data.result.n ? data.result.n : 0;
-        callback(err, n);
-      });
+      remove({}, callback);
     }
+  }
+
+  function remove(what, callback) {
+    return Event.remove(what, function(err, data) {
+      var n = data && data.result && data.result.n ? data.result.n : 0;
+      callback(err, n);
+    })
   }
 }
 
