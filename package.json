@@ -1,6 +1,6 @@
 {
   "name": "longterm_mongo_queue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A queue implementation for the longterm module, using mongoDB",
   "main": "mongo-queue.js",
   "directories": {
