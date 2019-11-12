@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/ChemicalRocketeer/longterm_mongo_queue#readme",
   "dependencies": {
-    "mongoose": "4.6.0"
+    "mongoose": "5.7.10"
   },
   "peerDependencies": {
     "longterm": "1.x"
